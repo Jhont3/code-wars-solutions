@@ -10,4 +10,7 @@ function filter_list(arr) {
   return arr.filter( (elem) => typeof elem === 'number')
 }
 
+console.log(filter_list([1,2,'a','b']))
+console.log(filter_list([1,2,'aasf','1','123',123]))
+
 //Not use isNan beause it will be false with "123" and return it
