@@ -93,20 +93,18 @@ decodeMorse = function (morseCode) {
     return MORSE_CODE[x];
   }
 
-  // Define la función auxiliar deco2, que toma una cadena que representa una palabra en código Morse y
-  // la convierte en una palabra en texto
   function deco2(x) {
     return x
-      .split(" ") // Divide la cadena por los espacios para obtener un array de secuencias de puntos y guiones
-      .map((x) => deco1(x)) // Convierte cada secuencia de puntos y guiones en su letra correspondiente
-      .join(""); // Une todas las letras para formar la palabra
+      .split(" ") 
+      .map((x) => deco1(x)) 
+      .join(""); 
   }
 
   return morseCode
-    .trim() // Elimina los espacios en blanco al principio y al final de la cadena
-    .split("   ") // Divide la cadena por la secuencia "   " para obtener un array de palabras en código Morse
-    .map((x) => deco2(x)) // Convierte cada palabra en su equivalente en texto
-    .join(" "); // Une todas las palabras en una sola cadena, separadas por un espacio en blanco
+    .trim() 
+    .split("   ")
+    .map((x) => deco2(x)) 
+    .join(" "); 
 };
 
 console.log(decodeMorse(".... . -.--   .--- ..- -.. ."));

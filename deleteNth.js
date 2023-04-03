@@ -19,24 +19,20 @@ function deleteNth(Array, n) {
   for (let i = 0; i < Array.length; i++) {
     const number = Array[i];
     if (repetition[number] === undefined) {
-      // Si no se ha agregado el número antes, agrega el número al resultado y actualiza el registro de repetition.
       resultArr.push(number);
       repetition[number] = 1;
     } else if (repetition[number] < n) {
-      // Si el número ya se ha agregado, pero no se ha alcanzado el límite de repetition, agrega el número al resultado
-      // y actualiza el registro de repetition.
       resultArr.push(number);
       repetition[number]++;
     }
-    // Si el número ya se ha agregado el número N veces, omite el número y continúa recorriendo la lista..
   }
   return resultArr;
 }
 
 console.log(deleteNth([1, 1, 3, 3, 7, 2, 2, 2, 2], 3)); // [1, 1, 3, 3, 7, 2, 2, 2]
 
-
-//Solución de alguien mas que me pareció interesante
+/*
+Solución de alguien mas que me pareció interesante
 function deleteNth(arr, x) {
   // Creamos un objeto "cache" para llevar el seguimiento de cuántas veces hemos visto cada número.
   var cache = {};
@@ -50,3 +46,4 @@ function deleteNth(arr, x) {
     // Evalúa si el número de ocurrencias de n es menor o igual para incluirlo
   });
 }
+*/

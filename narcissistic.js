@@ -31,7 +31,7 @@ function narcissistic(value) {
 console.log(narcissistic(153));
 console.log(narcissistic(1938));
 
-/* Opciones que me parecieron interesantes
+/* Another options
 
 function narcissistic(value) {
   let splitArray = value.toString().split("");
